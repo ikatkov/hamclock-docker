@@ -1,5 +1,20 @@
 # HamClock Docker
 
+
+Run From Synology NAS
+   ```
+   docker pull ghcr.io/ikatkov/hamclock-docker:main
+   docker stop hamclock-docker
+   docker rm hamclock-docker
+   docker run -d --name hamclock-docker -p 8080:8080 -p 8081:8081 --restart unless-stopped ghcr.io/ikatkov/hamclock-docker:main
+   ```
+
+
+This is a fork of https://github.com/ChrisRomp/hamclock-docker
+
+----------------------------------------------------------
+
+
 A Dockerized build of [HamClock](https://www.clearskyinstitute.com/ham/HamClock/) by Elwood Downey, WB0OEW.
 
 ![HamClock Screenshot](images/hamclock.png)
