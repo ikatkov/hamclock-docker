@@ -6,12 +6,17 @@ Run From Synology NAS
    docker pull ghcr.io/ikatkov/hamclock-docker:main
    docker stop hamclock-docker
    docker rm hamclock-docker
-   docker run -d --name hamclock-docker -p 8080:8080 -p 8081:8081 --restart unless-stopped ghcr.io/ikatkov/hamclock-docker:main
+   docker run -d --name hamclock-docker -p 8080:8080 -p 8081:8081 --restart unless-stopped --cpuset-cpus 0 --cpu-shares 2 ghcr.io/ikatkov/hamclock-docker:main
    ```
 
 
-This is a fork of https://github.com/ChrisRomp/hamclock-docker
+Maybe a better way is to use docker compose?
 
+
+
+
+This is a fork of https://github.com/ChrisRomp/hamclock-docker
+Original instructions below
 ----------------------------------------------------------
 
 
