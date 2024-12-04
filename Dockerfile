@@ -41,4 +41,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=2m --retries=3 CMD curl 
 # Start HamClock
 WORKDIR /hamclock/ESPHamClock
 COPY eeprom /root/.hamclock/
-CMD ["/usr/local/bin/hamclock", "-o", "-t", "30"]
+CMD ["/usr/local/bin/hamclock", "-o", "-t", "10"]
